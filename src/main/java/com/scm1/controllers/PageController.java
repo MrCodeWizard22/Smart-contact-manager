@@ -13,4 +13,12 @@ public class PageController {
         model.addAttribute("age", "21");
         return "home";
     }
+    @RequestMapping("/services")
+    public String services(){
+        return "services";
+    }
+    @RequestMapping("/contact")
+    public String contact(){
+        return "contact";
+    }
 }

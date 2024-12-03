@@ -4,22 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .first{
-            display: flex;
-            align-items: center;
-            padding: 40px;
-        }
-        h1{
-            margin-right: 2rem;
-        }
-    </style>
+    <link rel="stylesheet" th:href="@{/css/output.css}">
+
+    
 </head>
 <body>
-    Hello world
-    <div class="first">
-        <h1 data-th-text="${name}">abc</h1>
-        <p>yt channel : <span data-th-text="${yt}"> yt</span></p>
+    
+    <div class="flex flex-row ">
+        <h1 data-th-text="${name}" class="font-serif ">abc</h1>
+        <p class="font-bold">yt channel : <span data-th-text="${yt}"> yt</span></p>
     </div>
 </body>
 </html>
