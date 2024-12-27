@@ -3,6 +3,8 @@ package entities;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -30,7 +32,7 @@ public class User {
     @Id
     private String userId;
     @Column(name = "user_name", nullable = false)
-    private String name;
+    private String username;
     @Column(unique = true, nullable = false)
     private String email;
     private String password;
@@ -45,6 +47,7 @@ public class User {
     private boolean phoneVerified = false;
 
     // SELF, GOOGLE, FACEBOOK, TWITTER, LINKEDIN, GITHUB
+    @Enumerated(value=EnumType.STRING)  
     private Provider provider = Provider.SELF;
     private String providerUserId;
 
