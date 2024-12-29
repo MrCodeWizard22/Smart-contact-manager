@@ -13,6 +13,10 @@
     <div class="flex items-center justify-center min-h-screen">
       <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 class="text-2xl font-bold mb-6 text-gray-800">Register</h2>
+        <div data-th-if="${message}" class="alert alert-success">
+          <span data-th-text="${message}"></span>
+        </div>
+
         <form
           data-th-action="@{/do-register}"
           method="POST"
